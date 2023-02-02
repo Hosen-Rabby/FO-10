@@ -153,10 +153,11 @@ nav ul li a:hover:after {
 /*banner*/
 
 #banner {
-  background: url(assets/img/banner2.jpg) no-repeat center;
+  background: url(assets/img/fitness.jpg) no-repeat center;
   background-size: cover;
   text-align: center;
   height: 100vh;
+  background-attachment: fixed;
 }
 
 
@@ -368,20 +369,33 @@ footer .title{
 /* responsive */
 
 @media (max-width: 575px) {
-  #banner .banner_propic img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 2px solid var(--yellow);
-    margin-bottom: 20px;
-  }
-
   #banner .pro_info .pro_title {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 600;
   }
 
   p {
-    font-size: 14px;
+    font-size: 13px;
   }
+
+  
+.navbar-brand {
+  font-size: 20px;
+}
+.navbar-toggler-icon {
+  width: 23px;
+  height: 2px;
+  margin: 5px 0;
+}
+
+#footer_bottom p a {
+  font-size: 16px;
+}
+
+
+.to_top {
+  bottom: 20px;
+  right: 20px;
+}
+
 }
