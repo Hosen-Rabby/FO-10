@@ -29,9 +29,11 @@ p {
 }
 
 .dev{
-color: var(--yellow);}
+color: var(--yellow);
+}
+
 #preloader {
-  background: #fff url("../img/Triangles\ indicator.gif") no-repeat center
+  background: #fff url("assets/img/preloader.gif") no-repeat center
     center;
   width: 100%;
   height: 100vh;
@@ -41,29 +43,34 @@ color: var(--yellow);}
 }
 
 .to_top {
-  background-color: var(--yellow);
+  background-color: var(--blue);
   border: none;
   color: white;
   position: fixed;
   bottom: 40px;
-  right: 30px;
-  border-radius: 5px;
+  right: 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
   cursor: pointer;
   outline: none;
   display: none;
   transition: 0.4s ease-in-out;
   text-align: center;
   opacity: 0.8;
+  border: 1px solid var(--offwhite);
 }
 
 .to_top i {
-  font-size: 30px;
+  font-size: 20px;
+  line-height: 40px;
   padding: 0px 10px 5px 10px;
 }
 
 .to_top:hover {
   transform: scale(1.05) translateY(-5px);
 }
+
 .navbar-toggler-icon {
   display: block;
   width: 40px;
@@ -72,7 +79,7 @@ color: var(--yellow);}
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
-  background: #fec600;
+  background: #fff;
   margin: 7px 0;
 }
 
@@ -87,14 +94,14 @@ color: var(--yellow);}
   --offwhite: #f1f1f1;
   --offblack: #222;
   --ash: #e5e5e5;
-  --blue: #0042fd;
+  --blue: #4B70FD;
 }
 /*navbar*/
 
 .navbar-brand {
   font-size: 30px;
   font-weight: bold;
-  color: var(--yellow);
+  color: var(--blue);
   transition: 0.5s;
 }
 
@@ -109,7 +116,7 @@ nav {
   left: 0;
   z-index: 9999;
   width: 100%;
-  border-bottom: 1px solid rgba(254, 198, 0, 0.3);
+  border-bottom: 1px solid var(--ash);
   padding-bottom: 20px;
 }
 
@@ -123,14 +130,14 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: var(--yellow);
+  color: var(--blue);
 }
 
 nav ul li a:after {
   content: "";
   width: 70%;
   height: 3px;
-  background: var(--yellow);
+  background: var(--blue);
   position: absolute;
   bottom: -10px;
   left: 15%;
@@ -146,43 +153,43 @@ nav ul li a:hover:after {
 /*banner*/
 
 #banner {
-  background: url(assets/img/banner.jpg) no-repeat center;
+  background: url(assets/img/banner2.jpg) no-repeat center;
   background-size: cover;
   text-align: center;
   height: 100vh;
 }
 
-#banner .banner_propic img {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  border: 2px solid var(--yellow);
-  margin-bottom: 20px;
-}
-
-#banner .pro_info {
-  width: 400px;
-  background-color: rgba(18, 18, 18, 0);
-  border-radius: 5px;
-  margin: 0 auto;
-  color: var(--offwhite);
-  padding: 18px;
-  border: 2px solid var(--yellow);
-}
 
 #banner .pro_info .pro_title {
-  color: var(--yellow);
-  font-size: 25px;
+  color: var(--offwhite);
+  font-size: 35px;
   font-weight: 600;
 }
 
 #banner .banner_overlay {
   width: 100%;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#banner .banner_btn{
+color: var(--offwhite);
+border-color: var(--offwhite);
+}
+
+#banner .social_btn a i{
+  color: #353535;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 50%;
+  background: var(--offwhite);
+  margin: 0 5px;
+  font-size: 20px;
 }
 
 /* end of banner*/
@@ -190,11 +197,12 @@ nav ul li a:hover:after {
 /*about*/
 
 #about {
-  margin: 50px 0;
+  padding: 50px 0;
+  background-color: var(--offwhite);
 }
 
 #about .about_img img {
-  border: 3px solid var(--yellow);
+  border: 3px solid var(--blue);
 }
 
 #about .abt {
@@ -218,63 +226,90 @@ nav ul li a:hover:after {
 /* end of about*/
 
 /* experience */
-#experience {
-  background: url(assets/img/exp2.jpg) center no-repeat;
+
+.cards {
+  background-color: #4B70FD;
+  background: url(assets/img/exp3.jpg) center no-repeat;
   background-size: cover;
+  padding: 30px 0;
+  background-attachment: fixed;
 }
-#experience .title {
+
+.services{
+  background: url(assets/img/services.jpg) center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.cards .title {
   margin-bottom: 20px;
 }
-#experience .exp_overlay {
+.cards .exp_overlay {
   background-color: rgba(255, 255, 255, 0.923);
   padding: 30px;
 }
-#experience .exp_box {
-  text-align: center;
-  border: 1px solid var(--yellow);
-  padding: 20px;
-  border-radius: 3px;
+.cards .exp_box .inner{
+	padding:20px;
+	text-align: center;
+	position: relative;
+}
+
+.cards .exp_box{
+  border-bottom: #000;
+}
+.cards .exp_box .inner h4{
   margin: 20px 0;
-  height: 500px;
-  transition: 0.4s;
 }
 
-#experience .exp_box:hover {
-  box-shadow: 4px 4px 7px 0px rgba(196, 196, 196, 0.75);
-  -webkit-box-shadow: 4px 4px 7px 0px rgba(196, 196, 196, 0.75);
-  -moz-box-shadow: 4px 4px 7px 0px rgba(196, 196, 196, 0.75);
+.cards .exp_box .inner::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom:0;
+	width:0;
+	box-sizing: border-box;
+	height: 0;
+	border-bottom: 3px solid transparent;
+	border-left: 3px solid transparent;
+	transition: all .8s ease;
 }
-
-#experience .exp_box img {
-  border-radius: 50%;
-  margin-bottom: 30px;
+.cards .exp_box .inner::after{
+	content: '';
+	position: absolute;
+	right:0;
+	top:0;
+	width:0;
+	box-sizing: border-box;
+	height:0;
+	border-top:3px solid transparent;
+	border-right: 3px solid transparent;
+	transition: all .8s ease;
 }
-
-#experience .exp_box .company {
-  font-size: 12px;
+.cards .exp_box:hover .inner::after,
+.cards .exp_box:hover .inner::before{
+   border-color: var(--blue);
+   width: 100%;
+   height: 100%;
 }
-#experience .exp_box h6 {
-  font-weight: 500;
-  padding: 15px 0;
-  font-size: 20px;
+.cards .exp_box .inner i{
+	font-size:50px;
+	color:#000;
+	transition: color .8s ease;
 }
-
-#experience .exp_box a {
-  color: var(--yellow);
-  font-weight: 500;
-  margin-top: 20px;
+.cards .exp_box:hover .inner i{
+	color:var(--blue);
 }
 
 /*footer*/
 
 footer {
-  background: #333;
-  padding: 50px 0;
+  background: var(--offwhite);
+  padding: 30px 0;
   text-align: center;
 }
 
-footer .title {
-  color: white;
+footer .title{
+  color: rgb(0, 0, 0);
+  padding: 30px 0;
 }
 
 .bor {
@@ -285,7 +320,7 @@ footer .title {
 .footer_info:after {
   content: "";
   width: 1px;
-  background: #ddd;
+  background: rgb(0, 0, 0);
   height: 100%;
   position: absolute;
   right: 0;
@@ -300,74 +335,34 @@ footer .title {
   color: white;
 }
 
-.footer_icon i {
-  color: #353535;
-  width: 35px;
-  height: 35px;
-  line-height: 35px;
-  text-align: center;
-  border-radius: 50%;
-  background: var(--yellow);
-  margin-bottom: 30px;
-}
 
-.footer p {
-  font-size: 16px;
-  font-family: "Raleway", sans-serif;
-  color: #fff;
-  font-weight: 500;
-  padding: 0 8px;
-  margin-bottom: 0;
-  transition: all linear 0.3s;
-  -webkit-transition: all linear 0.3s;
-}
-
-.footer_social a {
-  color: #353535;
-}
-
-.footer_social i {
-  color: #353535;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  border-radius: 50%;
-  background: white;
-  margin-bottom: 30px;
-  margin: 5px 10px;
-  font-size: 18px;
-  transition: 0.5s;
-}
-
-.footer_social i:hover {
-  background: var(--yellow);
-}
-
-.footer_social p {
-  font-family: "Raleway", sans-serif;
+.btn {
+  border: 1px solid var(--blue);
+  margin: 30px 0;
+  padding: 10px 35px;
+  border-radius: 30px;
+  display: inline-block;
   font-size: 20px;
-  font-weight: 500;
-  text-transform: uppercase;
+  color: var(--blue);
+}
+
+.btn:hover {
+  background-color: var(--blue);
   color: #fff;
-  margin-top: 10px;
-  margin-bottom: 20px;
+  border: 1px solid var(--blue);
 }
-
-.footer_text p:hover {
-  color: var(--yellow);
-}
-
 /* end of footer*/
 
 #footer_bottom {
-  background: #353535;
+  background: var(--blue);
   padding: 20px 0;
   color: white;
 }
 
 #footer_bottom p a {
-  color: var(--yellow);
+  color: var(--offwhite);
+  font-weight: 600;
+  font-size: 20px;
 }
 
 /* responsive */
@@ -381,18 +376,11 @@ footer .title {
     margin-bottom: 20px;
   }
 
-  #banner .pro_info {
-    width: 320px;
-    padding: 12px;
-    border: 2px solid var(--yellow);
-    font-size: 12px;
-  }
-
   #banner .pro_info .pro_title {
-    color: var(--yellow);
     font-size: 28px;
     font-weight: 600;
   }
+
   p {
     font-size: 14px;
   }
